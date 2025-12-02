@@ -55,6 +55,17 @@ def initial_board():
 
     print("Initializing starter board..")
     for row in board:
-        print(row)
+        row_string = ""
+        for col in range(1, 9):
+            val = row[col]
+
+            if val == "":
+                row_string += "[   ]"
+            elif val.upper() == "R":
+                row_string += "[ R ]"
+            elif val.upper() == "B":
+                row_string += "[ B ]"
+
+        print(row_string)
 
     return board
