@@ -26,7 +26,7 @@ __version__ = "0.1.0"
 __license__ = "GNU General Public License Version 3"
 
 
-from mycheckers.game import main
+from mycheckers.game import main as main
 
 
 if __name__ == "__main__":

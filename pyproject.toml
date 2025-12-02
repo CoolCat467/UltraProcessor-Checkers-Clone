@@ -1,11 +1,28 @@
 [project]
 name = "mycheckers"
-version = "0.1.0"
+dynamic = ["version"]
+authors = [
+  { name="UltraProcessor", email="191808663+UltraProcessor@users.noreply.github.com" },
+]
 description = "Alternative solution for checkers game"
-readme = "README.md"
-requires-python = ">=3.13"
+readme = {file = "README.md", content-type = "text/markdown"}
+license = {file = "LICENSE"}
+requires-python = ">=3.10"
 dependencies = [
     "libcomponent>=0.0.5",
     "pygame>=2.6.1",
     "trio>=0.32.0",
 ]
+
+[tool.setuptools.dynamic]
+version = {attr = "mycheckers.__init__.__version__"}
+
+[project.urls]
+"Source" = "https://github.com/UltraProcessor/CheckersV2"
+"Bug Tracker" = "https://github.com/UltraProcessor/CheckersV2/issues"
+
+[project.gui-scripts]
+my_checkers_game = "mycheckers:main"
+
+[tool.uv]
+package = true

@@ -20,15 +20,8 @@ from __future__ import annotations
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-__title__ = "MyCheckers"
-__author__ = "UltraProcessor"
-__version__ = "0.1.0"
-__license__ = "GNU General Public License Version 3"
-
-
-from mycheckers.game import main
+from mycheckers import main
 
 
 if __name__ == "__main__":
-    print(f"{__title__} v{__version__}\nProgrammed by {__author__}.\n")
     main()
